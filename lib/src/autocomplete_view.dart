@@ -262,7 +262,7 @@ class PlacesAutocomplete extends StatefulWidget {
   final Offset? offset;
   final bool retainOnLoading;
   final bool showOnFocus;
-  final SuggestionsController<Prediction>? suggestionsController;
+  // final SuggestionsController <Prediction>? suggestionsController;
 
   const PlacesAutocomplete({
     super.key,
@@ -340,7 +340,7 @@ class PlacesAutocomplete extends StatefulWidget {
     this.listBuilder,
     this.retainOnLoading = true,
     this.showOnFocus = true,
-    this.suggestionsController,
+    // this.suggestionsController,
     this.offsetParameter,
   });
 
@@ -448,26 +448,26 @@ class _PlacesAutocompleteState extends State<PlacesAutocomplete> {
                 });
                 return completer.future;
               },
-              onSelected: (value) async {
-                _controller.selection =
-                    TextSelection.collapsed(offset: _controller.text.length);
-                _getDetailsByPlaceId(value.placeId ?? "", context);
-                widget.onSelected?.call(value);
-              },
+              // onChanged: (value) async {
+              //   _controller.selection =
+              //       TextSelection.collapsed(offset: _controller.text.length);
+              //   _getDetailsByPlaceId(value.placeId ?? "", context);
+              //   widget.onSelected?.call(value);
+              // },
               initialValue: widget.initialValue,
               validator: widget.validator,
               scrollController: widget.scrollController,
               animationDuration: widget.animationDuration,
               autoFlipDirection: widget.autoFlipDirection,
               debounceDuration: widget.debounceDuration,
-              direction: widget.direction,
-              suggestionErrorBuilder: widget.suggestionErrorBuilder,
+              // direction: widget.direction,
+              // suggestionErrorBuilder: widget.suggestionErrorBuilder,
               focusNode: widget.focusNode,
               hideOnEmpty: widget.hideOnEmpty,
               hideOnError: widget.hideOnError,
               hideOnLoading: widget.hideOnLoading,
               loadingBuilder: widget.loadingBuilder,
-              transitionBuilder: widget.transitionBuilder,
+              // transitionBuilder: widget.transitionBuilder,
               valueTransformer: widget.valueTransformer,
               enabled: widget.enabled,
               autovalidateMode: widget.autovalidateMode,
@@ -476,20 +476,20 @@ class _PlacesAutocompleteState extends State<PlacesAutocomplete> {
               onSaved: widget.onSaved,
               autoFlipListDirection: widget.autoFlipListDirection,
               autoFlipMinHeight: widget.autoFlipMinHeight,
-              constraints: widget.constraints,
-              customTextField: widget.customTextField,
-              decorationBuilder: widget.decorationBuilder,
-              emptyBuilder: widget.emptyBuilder,
+              // constraints: widget.constraints,
+              // customTextField: widget.customTextField,
+              // decorationBuilder: widget.decorationBuilder,
+              // emptyBuilder: widget.emptyBuilder,
               hideKeyboardOnDrag: widget.hideKeyboardOnDrag,
-              hideOnSelect: widget.hideOnSelect,
-              hideOnUnfocus: widget.hideOnUnfocus,
-              hideWithKeyboard: widget.hideWithKeyboard,
+              // hideOnSelect: widget.hideOnSelect,
+              // hideOnUnfocus: widget.hideOnUnfocus,
+              // hideWithKeyboard: widget.hideWithKeyboard,
               itemSeparatorBuilder: widget.itemSeparatorBuilder,
-              listBuilder: widget.listBuilder,
-              offset: widget.offset,
-              retainOnLoading: widget.retainOnLoading,
-              showOnFocus: widget.showOnFocus,
-              suggestionsController: widget.suggestionsController,
+              // listBuilder: widget.listBuilder,
+              // offset: widget.offset,
+              // retainOnLoading: widget.retainOnLoading,
+              // showOnFocus: widget.showOnFocus,
+              // suggestionsController: widget.suggestionsController,
             ),
           ),
         ),

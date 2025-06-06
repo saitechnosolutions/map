@@ -1,4 +1,4 @@
-library map_location_picker;
+library map;
 
 export 'package:geolocator/geolocator.dart';
 export 'package:google_maps_flutter/google_maps_flutter.dart';
